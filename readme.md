@@ -1,41 +1,32 @@
-# backend
+# User Management Dashboard - Backend
 
-> User Management Dashboard Backend
+## Tech Stack
+- FeathersJS
+- PostgreSQL
+- Knex
 
-## About
+## Setup Instructions
 
-This project uses [Feathers](http://feathersjs.com). An open source framework for building APIs and real-time applications.
+1. Clone repository
+git clone <repo-link>
 
-## Getting Started
+2. Install dependencies
+npm install
 
-1. Make sure you have [NodeJS](https://nodejs.org/) and [npm](https://www.npmjs.com/) installed.
-2. Install your dependencies
+3. Setup PostgreSQL database
 
-    ```
-    cd path/to/backend
-    npm install
-    ```
+4. Run migrations
+npx knex migrate:latest
 
-3. Start your app
+5. Start server
+npm start
 
-    ```
-    npm run migrate # Run migrations to set up the database
-    npm start
-    ```
+## API Endpoints
 
-## Testing
+GET /users  
+POST /users  
+PATCH /users/:id  
 
-Run `npm test` and all your tests in the `test/` directory will be run.
-
-## Scaffolding
-
-This app comes with a powerful command line interface for Feathers. Here are a few things it can do:
-
-```
-$ npx feathers help                           # Show all commands
-$ npx feathers generate service               # Generate a new Service
-```
-
-## Help
-
-For more information on all the things you can do with Feathers visit [docs.feathersjs.com](http://docs.feathersjs.com).
+## Features
+- CRUD operations
+- Soft delete using `deleted` field
